@@ -1,0 +1,89 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "Useful Links">
+<!ENTITY author    "Squid">
+<!ENTITY version   "2015.04.11">
+<!ENTITY launch    "Settings/useful.links">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/Squidly271/usefullinks/master/usefullinks.plg">
+<!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
+]>
+
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
+
+<CHANGES>
+###2015.04.11###
+- Initial Version
+
+</CHANGES>
+
+<!--
+Copyright 2015, Squid Software
+Useful links - A collection of useful links in plugin form
+-->
+
+<!--
+The 'pre-install' script.
+-->
+
+<FILE Name="&plugdir;/README.md">
+<INLINE>
+###Useful Links###
+A collection of useful links for unRaid v6
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash">
+<INLINE>
+
+# Remove old 'source' files
+rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null|grep -v '&version;')
+</INLINE>
+</FILE>
+
+<!--
+The 'source' file.
+-->
+<FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
+<URL>https://github.com/Squidly271/DockerSearch/raw/master/DockerSearch.txz</URL>
+</FILE>
+
+
+<!--
+The 'post-install' script.
+-->
+<FILE Run="/bin/bash">
+<INLINE>
+
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; has been installed."
+echo " Copyright 2015, Squid Software"
+echo " Version: &version;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+<!--
+The 'remove' script.
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+
+removepkg &name;-&version;
+rm -r /usr/local/emhttp/plugins/useful.links
+rm -r /boot/config/plugins/useful.links
+rm -r /tmp/.useful.links
+rm /boot/config/plugins/usefullinks.plg
+</INLINE>
+</FILE>
+
+</PLUGIN>
+
+
+
+
+
+

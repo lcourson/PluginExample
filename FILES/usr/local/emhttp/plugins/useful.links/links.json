@@ -1,0 +1,88 @@
+[
+{
+"url":	"http://lime-technology.com",
+"description": "Lime Technology Website",
+"type": 0
+},
+{
+"url":	"http://lime-technology.com/registrationkeys/",
+"description":	"unRaid Registration Keys & Features",
+"type": 0
+},
+{
+"url":	"http://lime-technology.com/limetech-gear/",
+"description":	"unRaid Case Badges",
+"type": 0
+},
+{
+"url":	"http://lime-technology.com/hardware-recommendations/",
+"description":	"Official Hardware Recommendations",
+"type": 0
+},
+{
+"url":	"http://lime-technology.com/getting-started/",
+"description":	"Getting started",
+"type": 1
+},
+{
+"url":	"http://lime-technology.com/docker-guide/",
+"description":	"Official Docker Getting Started Guide",
+"type": 1
+},
+{
+"url":	"http://lime-technology.com/wiki/index.php/UnRAID_Wiki",
+"description":	"unRaid Wiki",
+"type": 0
+},
+{
+"url":	"http://lime-technology.com/wiki/index.php/UnRAID_Manual_6"
+"description":	"unRaid v6 Manual (work in progress)",
+"type": 1
+},
+{
+"url":	"http://lime-technology.com/wiki/index.php/Troubleshooting"
+"description":	"General Troubleshooting",
+"type": 2
+},
+{
+"url":	"http://lime-technology.com/wiki/index.php/Troubleshooting#Capturing_your_syslog",
+"description":	"How to capture your syslog if webUI offline",
+"type": 2
+},
+{
+"url":	"http://lime-technology.com/wiki/index.php/The_Analysis_of_Drive_Issues",
+"description":	"Analysis of Hard Drive Issues",
+"type":	2
+},
+{
+"url":	"http://lime-technology.com/wiki/index.php/Release_Notes",
+"description":	"Release Notes",
+"type": 3
+},
+{
+"url":	"http://lime-technology.com/new-licensing-announcements/",
+"description":	"Formal Licence Announcement",
+"type": 3
+},
+{
+"url":	"http://lime-technology.com/setting-up-your-file-structure-and-user-shares-on-unraid/",
+"description":	"How to setup user shares",
+"type": 1
+},
+{
+"url":	"http://lime-technology.com/forum/index.php",
+"description":	"unRaid Forum",
+"type": 0
+},
+{
+"url":	"http://lime-technology.com/forum/index.php?topic=37732.0",
+"description":	"A noobie docker setup guide",
+"type": 1
+},
+{
+"url":	"http://lime-technology.com/forum/index.php?board=39.0"
+"description":	"unRaid Compulsive Design",
+"type": 3
+}
+]
+

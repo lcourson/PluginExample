@@ -1,0 +1,91 @@
+Menu="Utilities"
+Title="Useful Links"
+---
+<?PHP
+/* Copyright 2015 Squid Software
+*/
+?>
+<script>
+function loadPage0(value) {
+	
+	if (value.search("lime-technology.com/forum") != -1) {
+		document.getElementById("myFrame").src = "";
+		document.getElementById("viewWeb").disabled = true;
+		document.getElementById("category0").selectedIndex = 0;
+		window.open(value);
+	} else {
+		document.getElementById("myFrame").src = value;
+		document.getElementById("viewWeb").disabled = false;
+	}
+	document.getElementById("category1").selectedIndex = 0;
+	document.getElementById("category2").selectedIndex = 0;
+	document.getElementById("category3").selectedIndex = 0;
+
+}
+
+function loadPage1(value) {
+        if (value.search("lime-technology.com/forum") != -1) {
+                document.getElementById("myFrame").src = "";
+                document.getElementById("viewWeb").disabled = true;
+                document.getElementById("category1").selectedIndex = 0;
+
+                window.open(value);
+        } else {
+                document.getElementById("myFrame").src = value;
+                document.getElementById("viewWeb").disabled = false;
+        }
+        document.getElementById("category0").selectedIndex = 0;
+        document.getElementById("category2").selectedIndex = 0;
+        document.getElementById("category3").selectedIndex = 0;
+
+}
+
+function loadPage2(value) {
+        if (value.search("lime-technology.com/forum") != -1) {
+                document.getElementById("myFrame").src = "";
+                document.getElementById("viewWeb").disabled = true;
+                document.getElementById("category2").selectedIndex = 0;
+                window.open(value);
+        } else {
+                document.getElementById("myFrame").src = value;
+                document.getElementById("viewWeb").disabled = false;
+        }
+        document.getElementById("category0").selectedIndex = 0;
+        document.getElementById("category1").selectedIndex = 0;
+        document.getElementById("category3").selectedIndex = 0;
+
+}
+function loadPage3(value) {
+        if (value.search("lime-technology.com/forum") != -1) {
+                document.getElementById("myFrame").src = "";
+                document.getElementById("viewWeb").disabled = true;
+                document.getElementById("category3").selectedIndex = 0;
+                window.open(value);
+        } else {
+                document.getElementById("myFrame").src = value;
+                document.getElementById("viewWeb").disabled = false;
+        }
+        document.getElementById("category0").selectedIndex = 0;
+        document.getElementById("category1").selectedIndex = 0;
+        document.getElementById("category2").selectedIndex = 0;
+
+}
+
+function newPage() {
+	framePage = document.getElementById("myFrame").src;
+	window.open(framePage);
+}
+
+</script>
+<p id="test"></p>
+<center>
+<?readfile("/tmp/.useful.links/temp0");?>
+<?readfile("/tmp/.useful.links/temp1");?>
+<?readfile("/tmp/.useful.links/temp2");?>
+<?readfile("/tmp/.useful.links/temp3");?>
+
+<input id="viewWeb" type="button" disabled style="float: right" onclick=newPage() value="View As Web Page">
+
+<iframe id="myFrame" src="" height=450 width=100%></iframe>
+<center>If trying a link within a page doesn't go anywhere, try opening it in a new window</center>
+
