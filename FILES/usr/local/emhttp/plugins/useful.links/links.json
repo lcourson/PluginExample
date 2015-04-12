@@ -35,12 +35,12 @@
 "type": 0
 },
 {
-"url":	"http://lime-technology.com/wiki/index.php/UnRAID_Manual_6"
+"url":	"http://lime-technology.com/wiki/index.php/UnRAID_Manual_6",
 "description":	"unRaid v6 Manual (work in progress)",
 "type": 1
 },
 {
-"url":	"http://lime-technology.com/wiki/index.php/Troubleshooting"
+"url":	"http://lime-technology.com/wiki/index.php/Troubleshooting",
 "description":	"General Troubleshooting",
 "type": 2
 },
@@ -80,7 +80,7 @@
 "type": 1
 },
 {
-"url":	"http://lime-technology.com/forum/index.php?board=39.0"
+"url":	"http://lime-technology.com/forum/index.php?board=39.0",
 "description":	"unRaid Compulsive Design",
 "type": 3
 }
