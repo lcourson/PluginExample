@@ -77,10 +77,8 @@ function newPage() {
 }
 
 </script>
+<?exec("/usr/local/emhttp/plugins/useful.links/scripts/getLinks.sh");?>
 
-<?exec("/usr/local/emhttp/plugins/Useful.links/getLinks.sh");?>
-
-<p id="test"></p>
 <center>
 <?readfile("/tmp/.useful.links/temp0");?>
 <?readfile("/tmp/.useful.links/temp1");?>

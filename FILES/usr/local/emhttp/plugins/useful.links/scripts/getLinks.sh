@@ -3,7 +3,7 @@
 # download the links.json file
 mkdir -p /tmp/.useful.links > /dev/null
 
-wget "https://raw.githubusercontent.com/Squidly271/UsefulLinks/master/FILES/usr/local/emhttp/plugins/online.help/links.json" -O /tmp/.useful.links/links.json > /dev/null 2>&1
+wget "https://raw.githubusercontent.com/Squidly271/UsefulLinks/master/FILES/usr/local/emhttp/plugins/useful.links/links.json" -O /tmp/.useful.links/links.json
 
 # parse the file into something easier
 
