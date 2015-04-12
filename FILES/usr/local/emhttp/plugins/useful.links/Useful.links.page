@@ -87,6 +87,6 @@ function newPage() {
 
 <input id="viewWeb" type="button" disabled style="float: right" onclick=newPage() value="View As Web Page">
 
-<iframe id="myFrame" src="" height=450 width=100%></iframe>
 <center>If trying a link within a page doesn't go anywhere, try opening it in a new window</center>
+<iframe id="myFrame" src="" height=430 width=100%></iframe>
 
