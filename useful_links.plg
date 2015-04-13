@@ -4,15 +4,15 @@
 <!ENTITY name      "useful.links">
 <!ENTITY author    "Squid">
 <!ENTITY version   "2015.04.11">
-<!ENTITY launch    "Settings/Useful.links">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/Squidly271/UsefulLinks/master/usefulLinks.plg">
+<!ENTITY launch    "Tools/Useful.links">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/Squidly271/UsefulLinks/master/useful_links.plg">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 ]>
 
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
-###2015.04.11###
+###2015.04.12###
 - Initial Version
 
 </CHANGES>

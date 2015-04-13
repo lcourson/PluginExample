@@ -36,7 +36,7 @@
 },
 {
 "url":	"http://lime-technology.com/wiki/index.php/UnRAID_Manual_6",
-"description":	"unOfficial unRaid v6 Manual (work in progress)",
+"description":	"unRaid v6 Manual (work in progress)",
 "type": 1
 },
 {
@@ -82,21 +82,6 @@
 {
 "url":	"http://lime-technology.com/forum/index.php?board=39.0",
 "description":	"unRaid Compulsive Design",
-"type": 3
-},
-{
-"url":	"http://psucalc.info/",
-"description":	"Power Supply And 12V Rail Calculator",
-"type": 2
-},
-{
-"url":	"http://lime-technology.com/wiki/index.php/Parity",
-"description":	"What is Parity?",
-"type": 0
-},
-{
-"url":	"http://lime-technology.com/forum/index.php?topic=2817.0",
-"description":	"Preclear Disks",
 "type": 3
 }
 ]

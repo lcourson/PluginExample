@@ -1,5 +1,6 @@
-Menu="Utilities"
+Menu="Help"
 Title="Useful Links"
+Icon="useful.links.png"
 ---
 <?PHP
 /* Copyright 2015 Squid Software
