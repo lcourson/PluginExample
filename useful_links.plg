@@ -12,6 +12,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2015.04.18###
+- Fixed typo in uninstall routine
+
 ###2015.04.14###
 - Added help information
 
