@@ -93,6 +93,11 @@
 "url":	"http://psucalc.info/",
 "description":	"Power Supply and 12V rail Calculator",
 "type": 2
+},
+{
+"url":  "http://wiki.yobi.be/wiki/Screen_Tips",
+"description":  "How to use 'Screen'",
+"type": 1
 }
 ]
 
