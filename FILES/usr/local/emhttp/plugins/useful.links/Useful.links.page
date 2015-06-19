@@ -66,6 +66,12 @@ function loadPage3(value) {
                 document.getElementById("myFrame").src = value;
                 document.getElementById("viewWeb").disabled = false;
         }
+	if (value.search("youtube") != -1) {
+                document.getElementById("myFrame").src = "";
+                document.getElementById("viewWeb").disabled = true;
+                document.getElementById("category3").selectedIndex = 0;
+                window.open(value);
+	}
         document.getElementById("category0").selectedIndex = 0;
         document.getElementById("category1").selectedIndex = 0;
         document.getElementById("category2").selectedIndex = 0;
