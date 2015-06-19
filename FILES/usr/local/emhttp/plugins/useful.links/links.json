@@ -103,6 +103,16 @@
 "url":  "http://www.linuxatemyram.com/",
 "description":  "Why is my RAM usage so high?",
 "type": 2
+},
+{
+"url":  "https://www.youtube.com/channel/UC5LYki2fFiiqYnKx1xnIJbg",
+"description":  "jonp's (LimeTech) Video Guides",
+"type": 3
+},
+{
+"url": "https://en.wikipedia.org/wiki/S.M.A.R.T.",
+"description":  "What is S.M.A.R.T.?",
+"type": 2
 }
 ]
 
