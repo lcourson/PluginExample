@@ -113,6 +113,11 @@
 "url": "https://en.wikipedia.org/wiki/S.M.A.R.T.",
 "description":  "What is S.M.A.R.T.?",
 "type": 2
+},
+{
+"url": "http://lime-technology.com/forum/index.php?topic=40937.0",
+"description": "Docker FAQ",
+"type": 1
 }
 ]
 
