@@ -123,6 +123,16 @@
 "url": "https://lime-technology.com/forum/index.php?topic=44172.msg421807#msg421807",
 "description": "Dynamix cron entries",
 "type": 2
+},
+{
+"url": "http://lime-technology.com/wiki/index.php/Troubleshooting#Hard_drive_failures",
+"description": "Hard Drive Failures",
+"type": 2
+},
+{
+"url": "http://lime-technology.com/wiki/index.php/Troubleshooting#What_do_I_do_if_I_get_a_red_X_next_to_a_hard_disk.3F",
+"description": "Red X Next To Drive",
+"type": 2
 }
 ]
 
