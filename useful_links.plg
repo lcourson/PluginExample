@@ -11,7 +11,7 @@
 
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
-<CHANGES>
+<CHANGE>
 ###2016.06.16###
 - Update test for CA.  No functionality difference in this plugin
 
