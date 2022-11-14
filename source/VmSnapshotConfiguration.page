@@ -1,5 +1,5 @@
-Menu="VmSnapshot"
-Title="VM Snapshots Configuration"
+Menu="Vmsnapshot:2"
+Title="Second Page"
 ---
 <?PHP
 /* Copyright 2022, Lance Courson
