@@ -5,11 +5,18 @@
 <!ENTITY author    "lcourson">
 <!ENTITY version   "2022.11.14">
 <!ENTITY launch    "Tools/VMSnapshot">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/lcourson/PluginExample/master/vmsnapshot.plg">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/lcourson/PluginExample/master">
+<!ENTITY pluginURL "&gitURL;/vmsnapshot.plg">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
+<PLUGIN name="&name;"
+		author="&author;"
+		launch="&launch;"
+		version="&version;"
+		pluginURL="&pluginURL;"
+		icon="fa-desktop"
+		min="6.8.0">
 
 <CHANGES>
 ###2022.11.14###
@@ -78,7 +85,7 @@ removepkg &name;-&version;
 rm -r /usr/local/emhttp/plugins/&name;
 rm -r /boot/config/plugins/&name;
 rm -r /tmp/.vm.snapshot
-rm /boot/config/plugins/vm_snapshot.plg
+rm /boot/config/plugins/&name;.plg
 </INLINE>
 </FILE>
 

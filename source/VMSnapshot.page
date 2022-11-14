@@ -1,6 +1,8 @@
-Menu="OtherSettings"
-Title="VM Snapshot"
-Icon="vm_snapshot.png"
+Menu="VMSnapshotInformation"
+Type="xmenu"
+Title="VM Snapshots"
+Icon="fa-desktop"
+Tabs="true"
 ---
 <?PHP
 /* Copyright 2022, Lance Courson
