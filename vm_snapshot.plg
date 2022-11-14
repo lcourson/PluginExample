@@ -4,7 +4,7 @@
 <!ENTITY name      "vm.snapshot">
 <!ENTITY author    "lcourson">
 <!ENTITY version   "2022.11.14">
-<!ENTITY launch    "Tools/VM.snapshot">
+<!ENTITY launch    "Tools/VMSnapshot">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/lcourson/PluginExample/master/vm_snapshot.plg">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 ]>
