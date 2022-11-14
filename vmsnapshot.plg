@@ -16,7 +16,7 @@
 		launch="&launch;"
 		version="&version;"
 		pluginURL="&pluginURL;"
-		icon="fa-desktop"
+		icon="vm_snapshot.png"
 		min="6.8.0">
 
 <CHANGES>
@@ -67,7 +67,7 @@ Plugin for creating snapshots of VMs for Unraid
 rm -rf /boot/config/plugins/&name;
 
 # Uninstall the 'source' package
-removepkg &name;
+removepkg &name;-&version;
 </INLINE>
 </FILE>
 
