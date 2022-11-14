@@ -1,0 +1,26 @@
+Menu="OtherSettings"
+Title="VM Snapshot"
+Icon="vm_snapshot.png"
+---
+<?PHP
+/* Copyright 2022, Lance Courson
+*/
+?>
+<script>
+
+</script>
+
+<?exec("/usr/local/emhttp/plugins/vm.snapshot/scripts/getvms.sh");?>
+
+<center>
+<?readfile("/tmp/.vm.snapshot/temp0");?>
+
+> Select a page from one of the drop down lists to display
+
+> Select View as Web Page to open a new browser window (Note: Forum links will always display in a browser tab
+
+<input id="viewWeb" type="button" disabled style="float: right" onclick=newPage() value="View As Web Page">
+
+<center>If trying a link within a page doesn't go anywhere, try opening it in a new window</center>
+<iframe id="myFrame" src="" height=430 width=100%></iframe>
+

@@ -1,37 +1,25 @@
 <?xml version='1.0' standalone='yes'?>
 
 <!DOCTYPE PLUGIN [
-<!ENTITY name      "useful.links">
-<!ENTITY author    "Squid">
-<!ENTITY version   "2016.04.16">
-<!ENTITY launch    "Tools/Useful.links">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/Squidly271/UsefulLinks/master/useful_links.plg">
+<!ENTITY name      "vm.snapshot">
+<!ENTITY author    "lcourson">
+<!ENTITY version   "2022.11.14">
+<!ENTITY launch    "Tools/VM.snapshot">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/lcourson/PluginExample/master/vm_snapshot.plg">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 ]>
 
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
-###2016.06.16###
-- Update test for CA.  No functionality difference in this plugin
-
-###2015.06.19###
-- Updated to support YouTube links
-
-###2015.04.18###
-- Fixed typo in uninstall routine
-
-###2015.04.14###
-- Added help information
-
-###2015.04.12###
+###2022.11.14###
 - Initial Version
 
 </CHANGES>
 
 <!--
-Copyright 2015, Squid Software
-Useful links - A collection of useful links in plugin form
+Copyright 2022, Lance Courson
+Plugin for creating snapshots of VMs for Unraid
 -->
 
 <!--
@@ -40,8 +28,10 @@ The 'pre-install' script.
 
 <FILE Name="&plugdir;/README.md">
 <INLINE>
-###Useful Links###
-A collection of useful links for unRaid v6
+###VM Snapshots###
+A VM Snapshot Manager
+
+[Monitor icons created by Icongeek26 - Flaticon](https://www.flaticon.com/free-icons/monitor)
 </INLINE>
 </FILE>
 
@@ -57,7 +47,7 @@ rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null|grep -v '&version
 The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
-<URL>https://github.com/Squidly271/UsefulLinks/raw/master/usefullinks.txz</URL>
+<URL>https://github.com/lcourson/PluginExample/raw/master/vmsnapshot.txz</URL>
 </FILE>
 
 
@@ -71,7 +61,7 @@ The 'post-install' script.
 echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been installed."
-echo " Copyright 2015, Squid Software"
+echo " Copyright 2022, Lance Courson"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
@@ -85,10 +75,10 @@ The 'remove' script.
 <INLINE>
 
 removepkg &name;-&version;
-rm -r /usr/local/emhttp/plugins/useful.links
-rm -r /boot/config/plugins/useful.links
-rm -r /tmp/.useful.links
-rm /boot/config/plugins/useful_links.plg
+rm -r /usr/local/emhttp/plugins/vm.snapshot
+rm -r /boot/config/plugins/vm.snapshot
+rm -r /tmp/.vm.snapshot
+rm /boot/config/plugins/vm_snapshot.plg
 </INLINE>
 </FILE>
 
