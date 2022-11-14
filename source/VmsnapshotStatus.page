@@ -14,15 +14,15 @@ Title="First Page"
 ?>
 <?
 $plugin = 'vmsnapshot';
-$translations = file_exists("$docroot/webGui/include/Translations.php");
-require_once "$docroot/plugins/$plugin/include/Legacy.php";
+$translations = file_exists("/webGui/include/Translations.php");
+require_once "/plugins/vmsnapshot/include/Legacy.php";
 ?>
 <?if (!$translations):?>
-<?eval('?>'.parse_file("$docroot/plugins/$plugin/Vmsnapshot.page"))?>
+<?eval('?>'.parse_file("/plugins/vmsnapshot/Vmsnapshot.page"))?>
 <?else:?>
 <script>
 function getvms() {
-  $.post('/plugins/<?=$plugin?>/include/GetVMs.php',{},function(data){
+  $.post('/plugins/vmsnapshot/include/GetVMs.php',{},function(data){
     $('#vmlist').html(data);
   });
 }

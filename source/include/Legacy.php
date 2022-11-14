@@ -1,5 +1,5 @@
 <?PHP
-require_once "$docroot/webGui/include/Markdown.php";
+require_once "/webGui/include/Markdown.php";
 
 // Compatibility functions to support Unraid legacy versions without multi-language
 if (!function_exists('_')) {

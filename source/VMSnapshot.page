@@ -1,6 +1,6 @@
 Menu="VmSnapshotInformation"
 Type="xmenu"
 Title="VM Snapshots Manager"
-Icon="fa-desktop"
+Icon="vm_snapshot.png"
 Tabs="true"
 ---
