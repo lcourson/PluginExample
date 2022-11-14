@@ -4,7 +4,7 @@
 <!ENTITY name      "vmsnapshot">
 <!ENTITY author    "lcourson">
 <!ENTITY version   "2022.11.14">
-<!ENTITY launch    "Tools/VmSnapshot">
+<!ENTITY launch    "Tools/Vmsnapshot">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/PluginExample/master">
 <!ENTITY pluginURL "&gitURL;/&name;.plg">
 <!ENTITY source    "/boot/config/plugins/&name;/&name;-&version;">
