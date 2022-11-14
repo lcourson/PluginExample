@@ -6,7 +6,14 @@ Tabs="true"
 ---
 <?PHP
 /* Copyright 2022, Lance Courson
-*/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License version 2,
+ * as published by the Free Software Foundation.
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ */
 ?>
 <?
 $plugin = 'vmsnapshot';
@@ -24,8 +31,10 @@ function getvms() {
 }
 $(getvms);
 </script>
-<span>Select a VM</span>
-<select id="vmlist"></select>
+<div>
+  <span>Select a VM</span>
+  <select id="vmlist"></select>
+</div>
 <input type="button" value="_(Done)_" onclick="done()">
 <?endif;?>
 

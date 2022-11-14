@@ -5,8 +5,9 @@
 <!ENTITY author    "lcourson">
 <!ENTITY version   "2022.11.14">
 <!ENTITY launch    "Tools/VmSnapshot">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/lcourson/PluginExample/master">
-<!ENTITY pluginURL "&gitURL;/vmsnapshot.plg">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/PluginExample/master">
+<!ENTITY pluginURL "&gitURL;/&name;.plg">
+<!ENTITY source    "/boot/config/plugins/&name;/&name;-&version;">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 ]>
 
@@ -29,63 +30,44 @@ Copyright 2022, Lance Courson
 Plugin for creating snapshots of VMs for Unraid
 -->
 
-<!--
-The 'pre-install' script.
--->
-
-<FILE Name="&plugdir;/README.md">
-<INLINE>
-###VM Snapshots###
-A VM Snapshot Manager
-
-[Monitor icons created by Icongeek26 - Flaticon](https://www.flaticon.com/free-icons/monitor)
-</INLINE>
-</FILE>
-
+<!-- PRE-INSTALL SCRIPT -->
 <FILE Run="/bin/bash">
 <INLINE>
-
-# Remove old 'source' files
-rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null|grep -v '&version;')
+	# remove plugin files from emhttp.
+    rm -rf /usr/local/emhttp/plugins/&name; 2>/dev/null
 </INLINE>
 </FILE>
 
-<!--
-The 'source' file.
--->
-<FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
-<URL>https://github.com/lcourson/PluginExample/raw/master/packages/&name;-&version;.txz</URL>
+<!-- SOURCE PACKAGE -->
+<FILE Name="&source;.txz" Run="upgradepkg --install-new --reinstall">
+<URL>https://raw.githubusercontent.com/&author;/PluginExample/master/packages/&name;-&version;.txz</URL>
 </FILE>
 
-
-<!--
-The 'post-install' script.
--->
+<!-- POST-INSTALL SCRIPT -->
 <FILE Run="/bin/bash">
 <INLINE>
-
-
-echo ""
-echo "-----------------------------------------------------------"
-echo " &name; has been installed."
-echo " Copyright 2022, Lance Courson"
-echo " Version: &version;"
-echo "-----------------------------------------------------------"
-echo ""
+	# set plugin permissions.
+	chmod -R 755 /usr/local/emhttp/plugins/&name;
+	
+	#finished message.
+	echo ""
+	echo "-----------------------------------------------------------"
+	echo " &name; has been installed."
+	echo " Copyright 2022, Lance Courson"
+	echo " Version: &version;"
+	echo "-----------------------------------------------------------"
+	echo ""
 </INLINE>
 </FILE>
 
-<!--
-The 'remove' script.
--->
+<!-- REMOVE SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
+# Remove plugin related files
+rm -rf /boot/config/plugins/&name;
 
-removepkg &name;-&version;
-rm -r /usr/local/emhttp/plugins/&name;
-rm -r /boot/config/plugins/&name;
-rm -r /tmp/.vm.snapshot
-rm /boot/config/plugins/&name;.plg
+# Uninstall the 'source' package
+removepkg &name;
 </INLINE>
 </FILE>
 
