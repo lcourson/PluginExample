@@ -47,7 +47,7 @@ rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null|grep -v '&version
 The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
-<URL>https://github.com/lcourson/PluginExample/raw/master/vmsnapshot.txz</URL>
+<URL>https://github.com/lcourson/PluginExample/raw/master/packages/vmsnapshot-&version;.txz</URL>
 </FILE>
 
 
