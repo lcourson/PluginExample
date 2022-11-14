@@ -1,0 +1,24 @@
+Menu="VmSnapshot"
+Title="VM Snapshots Configuration"
+---
+<?PHP
+/* Copyright 2022, Lance Courson
+*/
+?>
+<?
+$plugin = 'vmsnapshot';
+$translations = file_exists("$docroot/webGui/include/Translations.php");
+require_once "$docroot/plugins/$plugin/include/Legacy.php";
+?>
+<?if (!$translations):?>
+<?eval('?>'.parse_file("$docroot/plugins/$plugin/VmSnapshotConfiguration.page"))?>
+<?else:?>
+<script>
+
+</script>
+
+<span>Configuration Section</span>
+
+<input type="button" value="_(Done)_" onclick="done()">
+<?endif;?>
+

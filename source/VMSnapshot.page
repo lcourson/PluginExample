@@ -1,7 +1,7 @@
-Menu="VMSnapshotInformation"
+Menu="VmSnapshotInformation"
 Type="xmenu"
-Title="VM Snapshots"
-Icon="vm_snapshot.png"
+Title="VM Snapshots Manager"
+Icon="fa-desktop"
 Tabs="true"
 ---
 <?PHP
@@ -14,7 +14,7 @@ $translations = file_exists("$docroot/webGui/include/Translations.php");
 require_once "$docroot/plugins/$plugin/include/Legacy.php";
 ?>
 <?if (!$translations):?>
-<?eval('?>'.parse_file("$docroot/plugins/$plugin/VMSnapshot.page"))?>
+<?eval('?>'.parse_file("$docroot/plugins/$plugin/VmSnapshot.page"))?>
 <?else:?>
 <script>
 function getvms() {
