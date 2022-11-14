@@ -8,22 +8,24 @@ Tabs="true"
 /* Copyright 2022, Lance Courson
 */
 ?>
+<?
+$plugin = 'vmsnapshot';
+$translations = file_exists("$docroot/webGui/include/Translations.php");
+require_once "$docroot/plugins/$plugin/include/Legacy.php";
+?>
+<?if (!$translations):?>
+<?eval('?>'.parse_file("$docroot/plugins/$plugin/VMSnapshot.page"))?>
+<?else:?>
 <script>
-
+function getvms() {
+  $.post('/plugins/<?=$plugin?>/include/GetVMs.php',{},function(data){
+    $('#vmlist').html(data);
+  });
+}
+$(getvms);
 </script>
-
-<?exec("/usr/local/emhttp/plugins/vmsnapshot/scripts/getvms.sh");?>
-
-<center>
-<?readfile("/tmp/.vm.snapshot/temp0");?>
-</center>
-
-> Select a page from one of the drop down lists to display
-
-> Select View as Web Page to open a new browser window (Note: Forum links will always display in a browser tab
-
-<input id="viewWeb" type="button" disabled style="float: right" onclick=newPage() value="View As Web Page">
-
-<center>If trying a link within a page doesn't go anywhere, try opening it in a new window</center>
-
+<span>Select a VM</span>
+<select id="vmlist"></select>
+<input type="button" value="_(Done)_" onclick="done()">
+<?endif;?>
 
