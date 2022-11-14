@@ -1,11 +1,11 @@
 <?xml version='1.0' standalone='yes'?>
 
 <!DOCTYPE PLUGIN [
-<!ENTITY name      "vm.snapshot">
+<!ENTITY name      "vmsnapshot">
 <!ENTITY author    "lcourson">
 <!ENTITY version   "2022.11.14">
 <!ENTITY launch    "Tools/VMSnapshot">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/lcourson/PluginExample/master/vm_snapshot.plg">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/lcourson/PluginExample/master/vmsnapshot.plg">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 ]>
 
@@ -47,7 +47,7 @@ rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null|grep -v '&version
 The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.txz" Run="upgradepkg --install-new">
-<URL>https://github.com/lcourson/PluginExample/raw/master/packages/vmsnapshot-&version;.txz</URL>
+<URL>https://github.com/lcourson/PluginExample/raw/master/packages/&name;-&version;.txz</URL>
 </FILE>
 
 
@@ -75,8 +75,8 @@ The 'remove' script.
 <INLINE>
 
 removepkg &name;-&version;
-rm -r /usr/local/emhttp/plugins/vm.snapshot
-rm -r /boot/config/plugins/vm.snapshot
+rm -r /usr/local/emhttp/plugins/&name;
+rm -r /boot/config/plugins/&name;
 rm -r /tmp/.vm.snapshot
 rm /boot/config/plugins/vm_snapshot.plg
 </INLINE>

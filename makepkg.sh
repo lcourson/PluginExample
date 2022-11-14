@@ -1,6 +1,6 @@
 #!/bin/bash
 PLUGIN_NAME="vmsnapshot"
-BASE_DIR="usr/local/emhttp/plugins"
+BASE_DIR="usr/local/emhttp/plugins/${PLUGIN_NAME}"
 TMP_DIR="/tmp/${PLUGIN_NAME}_"$(echo $RANDOM)""
 VERSION="$(date +'%Y.%m.%d')"
 SRCDIR=`pwd`
