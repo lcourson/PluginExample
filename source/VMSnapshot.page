@@ -1,7 +1,7 @@
 Menu="VMSnapshotInformation"
 Type="xmenu"
 Title="VM Snapshots"
-Icon="fa-desktop"
+Icon="vm_snapshot.png"
 Tabs="true"
 ---
 <?PHP
@@ -12,10 +12,11 @@ Tabs="true"
 
 </script>
 
-<?exec("/usr/local/emhttp/plugins/vm.snapshot/scripts/getvms.sh");?>
+<?exec("/usr/local/emhttp/plugins/vmsnapshot/scripts/getvms.sh");?>
 
 <center>
 <?readfile("/tmp/.vm.snapshot/temp0");?>
+</center>
 
 > Select a page from one of the drop down lists to display
 
@@ -24,5 +25,5 @@ Tabs="true"
 <input id="viewWeb" type="button" disabled style="float: right" onclick=newPage() value="View As Web Page">
 
 <center>If trying a link within a page doesn't go anywhere, try opening it in a new window</center>
-<iframe id="myFrame" src="" height=430 width=100%></iframe>
+
 
