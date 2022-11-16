@@ -1,5 +1,6 @@
 <?PHP
-require_once "/webGui/include/Markdown.php";
+$docroot = $docroot ?? $_SERVER['DOCUMENT_ROOT'] ?: '/usr/local/emhttp';
+require_once "$docroot/webGui/include/Markdown.php";
 
 // Compatibility functions to support Unraid legacy versions without multi-language
 if (!function_exists('_')) {
