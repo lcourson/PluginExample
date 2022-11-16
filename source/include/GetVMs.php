@@ -33,9 +33,11 @@ $vmnames = [];
 
 foreach ($data as $row) {
   if (!in_array($row,$vmnames,true)) {
-    $vmnames[] = $row;
-    echo "<option value=\"$row\">$row</option>";
+    if (strlen($row) > 0){
+      $vmnames[] = $row;
+      echo "<option value=\"$row\">$row</option>";
+    }
   }
 }
-if (!$streams) echo "<option value=\"-1\">No VMs Found</option>";
+if (!$vmnames) echo "<option value=\"-1\">No VMs Found</option>";
 ?>
