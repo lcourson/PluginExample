@@ -14,11 +14,12 @@ Title="First Page"
 ?>
 <?
 $plugin = 'vmsnapshot';
-$translations = file_exists("/webGui/include/Translations.php");
-require_once "/plugins/vmsnapshot/include/Legacy.php";
+$docroot = $docroot ?? $_SERVER['DOCUMENT_ROOT'] ?: '/usr/local/emhttp';
+$translations = file_exists("$docroot/webGui/include/Translations.php");
+require_once "$docroot/plugins/vmsnapshot/include/Legacy.php";
 ?>
 <?if (!$translations):?>
-<?eval('?>'.parse_file("/plugins/vmsnapshot/Vmsnapshot.page"))?>
+<?eval('?>'.parse_file("$docroot/plugins/vmsnapshot/Vmsnapshot.page"))?>
 <?else:?>
 <script>
 function getvms() {
