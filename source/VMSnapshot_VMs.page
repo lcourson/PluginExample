@@ -1,0 +1,13 @@
+Menu="VMs"
+Icon="server"
+---
+<?php
+
+?>
+
+<script>
+
+//(function() {
+    alert('VMSnapshot_VMs Loaded')
+//})();
+</script>
